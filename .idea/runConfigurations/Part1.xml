@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Part1" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="uk.co.stevebosman.lbd3.Main" />
+    <module name="learning-by-doing-pyramid" />
+    <option name="PROGRAM_PARAMETERS" value="triangle src/main/resources/part1.txt" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="uk.co.stevebosman.lbd3.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
