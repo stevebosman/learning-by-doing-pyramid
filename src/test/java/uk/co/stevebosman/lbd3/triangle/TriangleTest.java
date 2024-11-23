@@ -1,4 +1,4 @@
-package uk.co.stevebosman.lbd3;
+package uk.co.stevebosman.lbd3.triangle;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

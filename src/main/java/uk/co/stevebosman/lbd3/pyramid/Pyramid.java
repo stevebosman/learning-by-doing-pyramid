@@ -1,10 +1,11 @@
-package uk.co.stevebosman.lbd3;
+package uk.co.stevebosman.lbd3.pyramid;
+
+import uk.co.stevebosman.lbd3.util.LineParser;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -18,18 +19,12 @@ public class Pyramid {
     final List<String> lines = Files.readAllLines(Path.of(filename));
     List<List<Long>> currentPlane = new ArrayList<>();
     for (final String line : lines) {
-      currentPlane.add(convertLineToList(line));
+      currentPlane.add(LineParser.convertLineToList(line));
       if (currentPlane.size() == planes.size() + 1) {
         planes.add(new Plane<>(Collections.unmodifiableList(currentPlane)));
         currentPlane = new ArrayList<>();
       }
     }
-  }
-
-  private static List<Long> convertLineToList(final String line) {
-    return Arrays.stream(line.split("\\s+"))
-                 .map(s -> Long.parseLong(s, 16))
-                 .toList();
   }
 
   public long maximal() {

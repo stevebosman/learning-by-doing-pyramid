@@ -1,9 +1,10 @@
-package uk.co.stevebosman.lbd3;
+package uk.co.stevebosman.lbd3.triangle;
+
+import uk.co.stevebosman.lbd3.util.LineParser;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,15 +15,9 @@ public class Triangle {
   public Triangle(final String filename) throws IOException {
     final List<String> lines = Files.readAllLines(Path.of(filename));
     this.rows = lines.stream()
-                     .map(Triangle::convertLineToList)
+                     .map(LineParser::convertLineToList)
                      .toList();
 
-  }
-
-  private static List<Long> convertLineToList(final String line) {
-    return Arrays.stream(line.split("\\s+"))
-                 .map(s -> Long.parseLong(s, 16))
-                 .toList();
   }
 
   public long maximal() {
@@ -35,7 +30,7 @@ public class Triangle {
         long value = row.get(c);
         if (r != rows.size() - 1) {
           value += Math.max(values.get(new TriangleCoordinate(r+1, c)), values.get(new TriangleCoordinate(r+1, c + 1)));
-        };
+        }
         values.put(new TriangleCoordinate(r, c), value);
         maxForRow = Math.max(maxForRow, value);
       }

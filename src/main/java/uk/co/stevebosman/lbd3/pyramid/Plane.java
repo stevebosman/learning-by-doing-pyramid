@@ -1,4 +1,4 @@
-package uk.co.stevebosman.lbd3;
+package uk.co.stevebosman.lbd3.pyramid;
 
 import java.util.List;
 

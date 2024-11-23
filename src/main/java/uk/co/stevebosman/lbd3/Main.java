@@ -1,5 +1,8 @@
 package uk.co.stevebosman.lbd3;
 
+import uk.co.stevebosman.lbd3.pyramid.Pyramid;
+import uk.co.stevebosman.lbd3.triangle.Triangle;
+
 import java.io.IOException;
 
 public class Main {
@@ -13,6 +16,5 @@ public class Main {
     } else {
       System.err.println("Unknown type: " + args[0]);
     }
-
   }
 }

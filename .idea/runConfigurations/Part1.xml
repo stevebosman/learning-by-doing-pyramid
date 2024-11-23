@@ -5,7 +5,7 @@
     <option name="PROGRAM_PARAMETERS" value="triangle src/main/resources/part1.txt" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="uk.co.stevebosman.lbd3.*" />
+        <option name="PATTERN" value="uk.co.stevebosman.lbd3.pyramid.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
